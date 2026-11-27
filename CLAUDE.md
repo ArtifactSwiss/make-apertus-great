@@ -2,6 +2,8 @@
 
 Our entry for the ti&m challenge at Hack Apertus: the TrustRoom, an AI space inside e-banking.
 `challenge_description.md` is the brief, `starter/README.md` explains the mock e-banking we plug into.
+`docs/workshop/summary.md` adds what ti&m said at the kick-off: rule clarifications (web search, advice,
+fine-tuning), the personas and the Q&A. Its raw transcript is `docs/workshop/transcript.md`.
 Five people and their agents work in parallel, so the conventions below matter more than any clever solution.
 
 ## Rules of the challenge
