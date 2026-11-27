@@ -41,6 +41,11 @@ built, who is on it and how far it is. Every change belongs to a card.
   and keeps the run log; it never builds or merges.
 - Humans run `sprint-boundary` every few hours and `refine-issue` on new ideas.
 
+## Writing
+
+Before prose goes to a person (a card, a PR body, a commit message, docs, the report), apply the
+`unslop` skill to it.
+
 ## Scope
 
 One concern per PR: one capability or one fix, end to end. If you notice something else worth fixing,
