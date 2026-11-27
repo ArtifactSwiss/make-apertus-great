@@ -24,7 +24,7 @@ Five people and their agents work in parallel, so the conventions below matter m
 
 ## Board
 
-The [board](https://github.com/users/gusevm1/projects/4) is the single source of truth for what gets
+The [board](https://github.com/orgs/ArtifactSwiss/projects/8) is the single source of truth for what gets
 built, who is on it and how far it is. Every change belongs to a card.
 
 - **Before any work, use the `scrum-board` skill:** take the next Ready card, claim it, build it, open
@@ -46,7 +46,7 @@ First use on a laptop, once per person:
 - `gh auth status` shows the GitHub account that has access to this repo and to the board.
 - `gh auth refresh -s project` adds the scope the board commands need. A board command that fails with
   a permission error means this step is missing.
-- No board access at all: ask Maxim to add your account to the board.
+- No board access at all: ask an ArtifactSwiss org admin to give your account write access to the board.
 
 GitHub moves cards by itself (issue opened, PR opened, PR merged) through the Board workflow, which
 reads the repository secret `PROJECT_TOKEN`. Nobody needs that token locally. When the `sync` check
