@@ -1,0 +1,31 @@
+name: Card
+projects: ["gusevm1/4"]
+description: One piece of work for the board. Lands on the board; the PO moves it to Ready at the next sprint boundary.
+body:
+  - type: textarea
+    id: why
+    attributes:
+      label: Why
+      description: One or two sentences. Who needs this and what for?
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: What a reviewer can check. An agent builds exactly this and nothing more.
+      value: "- [ ] "
+    validations:
+      required: true
+  - type: input
+    id: demo
+    attributes:
+      label: Demo-path step
+      description: Which step of docs/demo-path.md this serves, or "none".
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Mockup, links, files to touch, "after #12" if it depends on another card.
