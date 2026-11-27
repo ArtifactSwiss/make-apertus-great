@@ -41,6 +41,17 @@ built, who is on it and how far it is. Every change belongs to a card.
   and keeps the run log; it never builds or merges.
 - Humans run `sprint-boundary` every few hours and `refine-issue` on new ideas.
 
+First use on a laptop, once per person:
+
+- `gh auth status` shows the GitHub account that has access to this repo and to the board.
+- `gh auth refresh -s project` adds the scope the board commands need. A board command that fails with
+  a permission error means this step is missing.
+- No board access at all: ask Maxim to add your account to the board.
+
+GitHub moves cards by itself (issue opened, PR opened, PR merged) through the Board workflow, which
+reads the repository secret `PROJECT_TOKEN`. Nobody needs that token locally. When the `sync` check
+turns red on every PR, the token has expired and a repo admin stores a new one.
+
 ## Writing
 
 Before prose goes to a person (a card, a PR body, a commit message, docs, the report), apply the
