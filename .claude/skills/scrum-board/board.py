@@ -1021,8 +1021,8 @@ def main() -> None:
     commands.add_parser("ci", help="handle a GitHub Actions event").set_defaults(run=cmd_ci)
 
     setup = commands.add_parser("setup", help="create or repair the board")
-    setup.add_argument("--owner", default="gusevm1")
-    setup.add_argument("--title", default="Hack Apertus 2026")
+    setup.add_argument("--owner", default="ArtifactSwiss")
+    setup.add_argument("--title", default="Make Apertus Great")
     setup.set_defaults(run=cmd_setup)
 
     args = parser.parse_args()

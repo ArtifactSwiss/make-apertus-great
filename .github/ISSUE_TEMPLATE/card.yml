@@ -1,5 +1,5 @@
 name: Card
-projects: ["gusevm1/4"]
+projects: ["ArtifactSwiss/8"]
 description: One piece of work for the board. Lands on the board; the PO moves it to Ready at the next sprint boundary.
 body:
   - type: textarea
