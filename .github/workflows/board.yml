@@ -1,0 +1,28 @@
+name: Board
+
+# Moves cards on what GitHub can prove, and fails a PR that links no card.
+# Needs the secret PROJECT_TOKEN (PAT with `repo` + `project`): the default GITHUB_TOKEN cannot write to projects.
+# Runs board.py from the base branch, never the PR head. board.yml itself comes from the PR, so any branch here can read the secret.
+on:
+  issues:
+    types: [opened, closed, reopened]
+  pull_request:
+    branches: [main]
+    types: [opened, edited, synchronize, reopened, ready_for_review, converted_to_draft, closed]
+  pull_request_review:
+    branches: [main]
+    types: [submitted]
+
+permissions:
+  contents: read
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.base.ref || github.event.repository.default_branch }}
+      - run: python3 .claude/skills/scrum-board/board.py ci
+        env:
+          GH_TOKEN: ${{ secrets.PROJECT_TOKEN }}
